@@ -1,0 +1,5 @@
+Contact: mailto:decamps.d@hotmail.com
+Expires: 2026-12-31T23:59:59.000Z
+Preferred-Languages: fr, en
+Canonical: https://votre-domaine.com/.well-known/security.txt
+Policy: https://votre-domaine.com/security-policy 

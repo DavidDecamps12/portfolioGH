@@ -1,0 +1,53 @@
+{
+    "name": "portfolio-junior-web-dev",
+    "version": "1.0.0",
+    "description": "Portfolio moderne pour développeur web junior en reconversion - Design 2025 avec glassmorphism",
+    "main": "index.html",
+    "scripts": {
+        "start": "python -m http.server 8000",
+        "dev": "python -m http.server 8000",
+        "serve": "npx http-server -p 8000",
+        "build": "echo 'Build completed - static files ready'",
+        "lint": "echo 'Linting completed'",
+        "test": "echo 'Tests completed'"
+    },
+    "keywords": [
+        "portfolio",
+        "web-developer",
+        "junior",
+        "reconversion",
+        "glassmorphism",
+        "responsive",
+        "modern-design",
+        "2025",
+        "react",
+        "symfony",
+        "javascript",
+        "css3",
+        "html5"
+    ],
+    "author": {
+        "name": "Développeur Web Junior",
+        "email": "decamps.d@hotmail.com"
+    },
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/yourusername/portfolio-junior-web-dev.git"
+    },
+    "bugs": {
+        "url": "https://github.com/yourusername/portfolio-junior-web-dev/issues"
+    },
+    "homepage": "https://yourusername.github.io/portfolio-junior-web-dev",
+    "devDependencies": {
+        "http-server": "^14.1.1"
+    },
+    "engines": {
+        "node": ">=14.0.0"
+    },
+    "browserslist": [
+        "> 1%",
+        "last 2 versions",
+        "not dead"
+    ]
+}

@@ -1,0 +1,881 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO Meta Tags -->
+    <title>Portfolio Développeur Web Junior | React, Symfony, Full-Stack | France</title>
+    <meta name="description"
+        content="Portfolio d'un développeur web junior en reconversion, spécialisé en React, Symfony et développement full-stack. Créateur d'expériences web modernes et performantes.">
+    <meta name="keywords"
+        content="développeur web, junior, reconversion, React, Symfony, portfolio, front-end, back-end, PHP, JavaScript, France">
+    <meta name="author" content="Développeur Web Junior">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Portfolio Développeur Web Junior | React, Symfony, Full-Stack">
+    <meta property="og:description"
+        content="Portfolio d'un développeur web junior en reconversion, spécialisé en React, Symfony et développement full-stack. Créateur d'expériences web modernes et performantes.">
+    <meta property="og:url" content="https://votre-domaine.com">
+    <meta property="og:image" content="https://votre-domaine.com/og-image.svg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:type" content="image/svg+xml">
+    <meta property="og:locale" content="fr_FR">
+    <meta property="og:site_name" content="Portfolio Développeur Web">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Portfolio Développeur Web Junior | React, Symfony, Full-Stack">
+    <meta name="twitter:description"
+        content="Portfolio d'un développeur web junior en reconversion, spécialisé en React, Symfony et développement full-stack.">
+    <meta name="twitter:image" content="https://votre-domaine.com/og-image.svg">
+
+    <!-- Additional SEO Meta Tags -->
+    <meta name="theme-color" content="#6366f1">
+    <meta name="msapplication-TileColor" content="#6366f1">
+    <link rel="canonical" href="https://votre-domaine.com">
+
+    <!-- Performance and Security -->
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="manifest" href="site.webmanifest">
+
+    <!-- Preconnect for Performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
+
+    <!-- DNS Prefetch for additional performance -->
+    <link rel="dns-prefetch" href="//fonts.googleapis.com">
+    <link rel="dns-prefetch" href="//cdnjs.cloudflare.com">
+    <link rel="dns-prefetch" href="//cdn.jsdelivr.net">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Resource Hints for Performance -->
+    <link rel="preload" href="styles.css" as="style">
+    <link rel="preload" href="script.js" as="script">
+
+    <!-- Critical CSS inline for above-the-fold content -->
+    <style>
+        /* Critical CSS for immediate rendering */
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: #ffffff;
+            background: #0a0a0f;
+            overflow-x: hidden;
+        }
+
+        .navbar {
+            background: rgba(0, 0, 0, 0.2) !important;
+            backdrop-filter: blur(20px) !important;
+        }
+
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .hero-title {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.5rem;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #6366f1, #06b6d4);
+            color: white;
+            border: none;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="navbar navbar-expand-lg fixed-top" role="navigation" aria-label="Navigation principale">
+            <div class="container">
+                <!-- Logo -->
+                <a class="navbar-brand" href="#home" aria-label="Accueil - Portfolio">
+                    <div class="logo-container">
+                        <span class="logo-text">David . D</span>
+                    </div>
+                </a>
+
+                <!-- Mobile Menu Button -->
+                <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                    aria-label="Basculer la navigation">
+                    <span class="toggler-icon"></span>
+                    <span class="toggler-icon"></span>
+                    <span class="toggler-icon"></span>
+                </button>
+
+                <!-- Navigation Menu -->
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#home" aria-label="Aller à la section accueil">
+                                <span class="nav-text">Accueil</span>
+                                <span class="nav-indicator"></span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#about" aria-label="Aller à la section à propos">
+                                <span class="nav-text">À propos</span>
+                                <span class="nav-indicator"></span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#projects" aria-label="Aller à la section projets">
+                                <span class="nav-text">Projets</span>
+                                <span class="nav-indicator"></span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#skills" aria-label="Aller à la section compétences">
+                                <span class="nav-text">Compétences</span>
+                                <span class="nav-indicator"></span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contact" aria-label="Aller à la section contact">
+                                <span class="nav-text">Contact</span>
+                                <span class="nav-indicator"></span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero" aria-labelledby="hero-title">
+            <!-- Animated Background Elements -->
+            <div class="particles-container" aria-hidden="true">
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+            </div>
+            <div class="morphing-shapes" aria-hidden="true">
+                <div class="morph-shape shape-1"></div>
+                <div class="morph-shape shape-2"></div>
+                <div class="morph-shape shape-3"></div>
+            </div>
+
+            <div class="container py-5">
+                <div class="row align-items-center min-vh-100">
+                    <div class="col-12 col-lg-6 mb-4 mb-lg-0 text-center text-lg-start">
+                        <h1 id="hero-title" class="hero-title display-4 fw-bold mb-4">
+                            <span class="gradient-text">Développeur Web</span>
+                        </h1>
+                        <p class="hero-subtitle lead mb-4">
+                            🚀 Créateur d'expériences web modernes & performantes,
+                            je transforme des idées en interfaces fluides, responsives et engageantes. Mon moteur ?
+                            L'obsession du détail, la vitesse, et l'envie constante d'apprendre pour repousser les
+                            limites
+                            du web.
+                        </p>
+                        <div
+                            class="hero-cta d-flex flex-column flex-sm-row gap-3 justify-content-center justify-content-lg-start">
+                            <a href="#projects" class="btn btn-primary btn-lg px-4 py-3"
+                                aria-label="Voir mes projets de développement web">
+                                <span class="btn-text">Voir mes projets</span>
+                                <span class="btn-icon ms-2" aria-hidden="true"><i class="fas fa-arrow-right"></i></span>
+                            </a>
+                            <a href="#contact" class="btn btn-outline-primary btn-lg px-4 py-3"
+                                aria-label="Me contacter pour un projet">
+                                <span class="btn-text">Me contacter</span>
+                                <span class="btn-icon ms-2" aria-hidden="true"><i class="fas fa-envelope"></i></span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-6 d-flex justify-content-center justify-content-lg-end">
+                        <div class="hero-visual position-relative" aria-hidden="true">
+                            <div class="floating-card" data-tooltip="Compétences" role="button" tabindex="0"
+                                aria-label="Voir mes compétences">
+                                <i class="fas fa-code" aria-hidden="true"></i>
+                            </div>
+                            <div class="floating-card" data-tooltip="À propos" role="button" tabindex="0"
+                                aria-label="En savoir plus sur moi">
+                                <i class="fas fa-palette" aria-hidden="true"></i>
+                            </div>
+                            <div class="floating-card" data-tooltip="Projets" role="button" tabindex="0"
+                                aria-label="Voir mes projets">
+                                <i class="fas fa-rocket" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="scroll-indicator" aria-hidden="true">
+                <div class="scroll-arrow"></div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about" aria-labelledby="about-title">
+            <div class="container py-5">
+                <h2 id="about-title" class="section-title">
+                    <span class="title-line">À propos de moi</span>
+                    <div class="title-underline"></div>
+                </h2>
+                <div class="row align-items-center">
+                    <div class="col-12 col-lg-8 mb-4 mb-lg-0">
+                        <article class="text-content">
+                            <h3 class="about-subtitle h4 mb-3">
+                                <i class="fas fa-rocket subtitle-icon me-2" aria-hidden="true"></i>
+                                Ma passion pour le développement web
+                            </h3>
+                            <div class="about-paragraphs mb-4">
+                                <p class="paragraph-animated lead">
+                                    🚀 Créateur d'expériences web modernes & performantes,
+                                    je transforme des idées en interfaces fluides, responsives et engageantes. Mon
+                                    moteur ?
+                                    L'obsession du détail, la vitesse, et l'envie constante d'apprendre pour repousser
+                                    les
+                                    limites du web.
+                                </p>
+                            </div>
+                            <div class="about-stats d-flex flex-column flex-sm-row flex-wrap gap-4 justify-content-center justify-content-lg-start"
+                                role="list" aria-label="Mes statistiques">
+                                <div class="stat text-center" data-value="100" role="listitem">
+                                    <div class="stat-box">
+                                        <span class="stat-number" aria-label="100 pourcent">0%</span>
+                                    </div>
+                                    <span class="stat-label">Autonomie</span>
+                                </div>
+                                <div class="stat text-center" data-value="24" role="listitem">
+                                    <div class="stat-box">
+                                        <span class="stat-number" aria-label="24 heures sur 7">0/7</span>
+                                    </div>
+                                    <span class="stat-label">Disponibilité</span>
+                                </div>
+                                <div class="stat text-center" data-value="infinity" role="listitem">
+                                    <div class="stat-box">
+                                        <span class="stat-number" aria-label="Infini">∞</span>
+                                    </div>
+                                    <span class="stat-label">Curiosité</span>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-12 col-lg-4 d-flex justify-content-center">
+                        <figure class="image-container">
+                            <div class="image-border-animation" aria-hidden="true"></div>
+                            <img src="01013010.jpg" alt="Photo de profil du développeur web"
+                                class="profile-photo img-fluid rounded-circle" loading="eager" width="300" height="300"
+                                decoding="async">
+                            <div class="image-overlay" aria-hidden="true">
+                                <div class="overlay-content">
+                                    <i class="fas fa-user" aria-hidden="true"></i>
+                                    <span>Développeur Web</span>
+                                </div>
+                            </div>
+                        </figure>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="projects" aria-labelledby="projects-title">
+            <div class="container">
+                <h2 id="projects-title" class="section-title">
+                    <span class="title-line">Mes Projets</span>
+                    <div class="title-underline"></div>
+                </h2>
+                <div class="projects-construction">
+                    <article class="construction-content">
+                        <div class="construction-icon" aria-hidden="true">
+                            <i class="fas fa-tools"></i>
+                        </div>
+                        <h3>Section en construction</h3>
+                        <p>Cette section sera bientôt disponible avec mes projets de développement web.</p>
+                        <div class="construction-status">
+                            <span class="status-dot" aria-hidden="true"></span>
+                            <span class="status-text">En développement</span>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="skills" aria-labelledby="skills-title">
+            <div class="container py-5">
+                <h2 id="skills-title" class="section-title">
+                    <span class="title-line">Compétences</span>
+                    <div class="title-underline"></div>
+                </h2>
+                <div class="skills-intro mb-4 text-center">
+                    <p class="lead">Voici un aperçu de mes compétences techniques, outils et soft skills.</p>
+                </div>
+                <div class="row g-4 justify-content-center">
+                    <!-- Front-end Skills -->
+                    <div class="col-12 col-sm-6 col-lg-4">
+                        <article class="skill-category-modern h-100" data-category="frontend">
+                            <header class="category-header d-flex align-items-center gap-2 mb-3">
+                                <div class="category-icon" aria-hidden="true"><i class="fas fa-laptop-code"></i></div>
+                                <h3 class="h5 mb-0">Front-end</h3>
+                            </header>
+                            <div class="category-progress mb-3">
+                                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0"
+                                    aria-valuemax="100" aria-label="Progression front-end 90%">
+                                    <div class="progress-fill" data-progress="90"></div>
+                                </div>
+                                <div class="progress-text small">HTML5, CSS3, JS, React, Bootstrap</div>
+                            </div>
+                            <ul class="skills-list list-unstyled" role="list" aria-label="Compétences front-end">
+                                <li class="skill-item d-flex align-items-center gap-2 mb-2" role="listitem">
+                                    <div class="skill-info"><i class="fab fa-html5" aria-hidden="true"></i>
+                                        <span>HTML5</span>
+                                    </div>
+                                    <div class="skill-level">
+                                        <div class="level-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0"
+                                            aria-valuemax="100" aria-label="Niveau HTML5 90%">
+                                            <div class="level-fill" style="width:90%"></div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="skill-item d-flex align-items-center gap-2 mb-2" role="listitem">
+                                    <div class="skill-info"><i class="fab fa-css3-alt" aria-hidden="true"></i>
+                                        <span>CSS3</span>
+                                    </div>
+                                    <div class="skill-level">
+                                        <div class="level-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0"
+                                            aria-valuemax="100" aria-label="Niveau CSS3 85%">
+                                            <div class="level-fill" style="width:85%"></div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="skill-item d-flex align-items-center gap-2 mb-2" role="listitem">
+                                    <div class="skill-info"><i class="fab fa-js" aria-hidden="true"></i>
+                                        <span>JavaScript</span>
+                                    </div>
+                                    <div class="skill-level">
+                                        <div class="level-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0"
+                                            aria-valuemax="100" aria-label="Niveau JavaScript 80%">
+                                            <div class="level-fill" style="width:80%"></div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="skill-item d-flex align-items-center gap-2 mb-2" role="listitem">
+                                    <div class="skill-info"><i class="fab fa-react" aria-hidden="true"></i>
+                                        <span>React</span>
+                                    </div>
+                                    <div class="skill-level">
+                                        <div class="level-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0"
+                                            aria-valuemax="100" aria-label="Niveau React 75%">
+                                            <div class="level-fill" style="width:75%"></div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="skill-item d-flex align-items-center gap-2 mb-2" role="listitem">
+                                    <div class="skill-info"><i class="fab fa-bootstrap" aria-hidden="true"></i>
+                                        <span>Bootstrap</span>
+                                    </div>
+                                    <div class="skill-level">
+                                        <div class="level-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0"
+                                            aria-valuemax="100" aria-label="Niveau Bootstrap 70%">
+                                            <div class="level-fill" style="width:70%"></div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </article>
+                    </div>
+                    <!-- Back-end Skills -->
+                    <div class="col-12 col-sm-6 col-lg-4">
+                        <div class="skill-category-modern h-100" data-category="backend">
+                            <div class="category-header d-flex align-items-center gap-2 mb-3">
+                                <div class="category-icon"><i class="fas fa-server"></i></div>
+                                <h3 class="h5 mb-0">Back-end</h3>
+                            </div>
+                            <div class="category-progress mb-3">
+                                <div class="progress-bar">
+                                    <div class="progress-fill" data-progress="75"></div>
+                                </div>
+                                <div class="progress-text small">PHP, Symfony, Node.js, Express</div>
+                            </div>
+                            <ul class="skills-list list-unstyled">
+                                <li class="skill-item d-flex align-items-center gap-2 mb-2">
+                                    <div class="skill-info"><i class="fab fa-php"></i> <span>PHP</span></div>
+                                    <div class="skill-level">
+                                        <div class="level-bar">
+                                            <div class="level-fill" style="width:80%"></div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="skill-item d-flex align-items-center gap-2 mb-2">
+                                    <div class="skill-info"><i class="fab fa-symfony"></i> <span>Symfony</span></div>
+                                    <div class="skill-level">
+                                        <div class="level-bar">
+                                            <div class="level-fill" style="width:75%"></div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="skill-item d-flex align-items-center gap-2 mb-2">
+                                    <div class="skill-info"><i class="fab fa-node-js"></i> <span>Node.js</span></div>
+                                    <div class="skill-level">
+                                        <div class="level-bar">
+                                            <div class="level-fill" style="width:70%"></div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="skill-item d-flex align-items-center gap-2 mb-2">
+                                    <div class="skill-info"><i class="fab fa-js"></i> <span>Express</span></div>
+                                    <div class="skill-level">
+                                        <div class="level-bar">
+                                            <div class="level-fill" style="width:65%"></div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Database Skills -->
+                    <div class="col-12 col-sm-6 col-lg-4">
+                        <div class="skill-category-modern h-100" data-category="database">
+                            <div class="category-header d-flex align-items-center gap-2 mb-3">
+                                <div class="category-icon"><i class="fas fa-database"></i></div>
+                                <h3 class="h5 mb-0">Base de données</h3>
+                            </div>
+                            <div class="category-progress mb-3">
+                                <div class="progress-bar">
+                                    <div class="progress-fill" data-progress="70"></div>
+                                </div>
+                                <div class="progress-text small">MySQL, SQL</div>
+                            </div>
+                            <ul class="skills-list list-unstyled">
+                                <li class="skill-item d-flex align-items-center gap-2 mb-2">
+                                    <div class="skill-info"><i class="fas fa-database"></i> <span>MySQL</span></div>
+                                    <div class="skill-level">
+                                        <div class="level-bar">
+                                            <div class="level-fill" style="width:75%"></div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="skill-item d-flex align-items-center gap-2 mb-2">
+                                    <div class="skill-info"><i class="fas fa-database"></i> <span>SQL</span></div>
+                                    <div class="skill-level">
+                                        <div class="level-bar">
+                                            <div class="level-fill" style="width:70%"></div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Tools Skills -->
+                    <div class="col-12 col-sm-6 col-lg-4">
+                        <div class="skill-category-modern h-100" data-category="tools">
+                            <div class="category-header d-flex align-items-center gap-2 mb-3">
+                                <div class="category-icon"><i class="fas fa-tools"></i></div>
+                                <h3 class="h5 mb-0">Outils</h3>
+                            </div>
+                            <div class="category-progress mb-3">
+                                <div class="progress-bar">
+                                    <div class="progress-fill" data-progress="80"></div>
+                                </div>
+                                <div class="progress-text small">GitHub, VS Code, Figma, Looping</div>
+                            </div>
+                            <ul class="skills-list list-unstyled">
+                                <li class="skill-item d-flex align-items-center gap-2 mb-2">
+                                    <div class="skill-info"><i class="fab fa-github"></i> <span>GitHub</span></div>
+                                    <div class="skill-level">
+                                        <div class="level-bar">
+                                            <div class="level-fill" style="width:80%"></div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="skill-item d-flex align-items-center gap-2 mb-2">
+                                    <div class="skill-info"><i class="fas fa-code"></i> <span>VS Code</span></div>
+                                    <div class="skill-level">
+                                        <div class="level-bar">
+                                            <div class="level-fill" style="width:75%"></div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="skill-item d-flex align-items-center gap-2 mb-2">
+                                    <div class="skill-info"><i class="fab fa-figma"></i> <span>Figma</span></div>
+                                    <div class="skill-level">
+                                        <div class="level-bar">
+                                            <div class="level-fill" style="width:70%"></div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="skill-item d-flex align-items-center gap-2 mb-2">
+                                    <div class="skill-info"><i class="fas fa-infinity"></i> <span>Looping</span></div>
+                                    <div class="skill-level">
+                                        <div class="level-bar">
+                                            <div class="level-fill" style="width:65%"></div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Soft Skills -->
+                    <div class="col-12 col-sm-6 col-lg-4">
+                        <div class="skill-category-modern h-100" data-category="soft">
+                            <div class="category-header d-flex align-items-center gap-2 mb-3">
+                                <div class="category-icon"><i class="fas fa-user-friends"></i></div>
+                                <h3 class="h5 mb-0">Soft Skills</h3>
+                            </div>
+                            <div class="category-progress mb-3">
+                                <div class="progress-bar">
+                                    <div class="progress-fill" data-progress="85"></div>
+                                </div>
+                                <div class="progress-text small">Communication, autonomie, esprit d'équipe, résolution
+                                    de
+                                    problèmes</div>
+                            </div>
+                            <ul class="skills-list list-unstyled">
+                                <li class="skill-item d-flex align-items-center gap-2 mb-2">
+                                    <div class="skill-info"><i class="fas fa-comments"></i> <span>Communication</span>
+                                    </div>
+                                    <div class="skill-level">
+                                        <div class="level-bar">
+                                            <div class="level-fill" style="width:90%"></div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="skill-item d-flex align-items-center gap-2 mb-2">
+                                    <div class="skill-info"><i class="fas fa-user-check"></i> <span>Autonomie</span>
+                                    </div>
+                                    <div class="skill-level">
+                                        <div class="level-bar">
+                                            <div class="level-fill" style="width:85%"></div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="skill-item d-flex align-items-center gap-2 mb-2">
+                                    <div class="skill-info"><i class="fas fa-users"></i> <span>Esprit d'équipe</span>
+                                    </div>
+                                    <div class="skill-level">
+                                        <div class="level-bar">
+                                            <div class="level-fill" style="width:80%"></div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="skill-item d-flex align-items-center gap-2 mb-2">
+                                    <div class="skill-info"><i class="fas fa-lightbulb"></i> <span>Résolution de
+                                            problèmes</span></div>
+                                    <div class="skill-level">
+                                        <div class="level-bar">
+                                            <div class="level-fill" style="width:75%"></div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Languages -->
+                    <div class="col-12 col-sm-6 col-lg-4">
+                        <div class="skill-category-modern h-100" data-category="languages">
+                            <div class="category-header d-flex align-items-center gap-2 mb-3">
+                                <div class="category-icon"><i class="fas fa-language"></i></div>
+                                <h3 class="h5 mb-0">Langues</h3>
+                            </div>
+                            <div class="category-progress mb-3">
+                                <div class="progress-bar">
+                                    <div class="progress-fill" data-progress="80"></div>
+                                </div>
+                                <div class="progress-text small">Français (natif), Anglais technique</div>
+                            </div>
+                            <ul class="skills-list list-unstyled">
+                                <li class="skill-item d-flex align-items-center gap-2 mb-2">
+                                    <div class="skill-info"><i class="fas fa-flag"></i> <span>Français</span></div>
+                                    <div class="skill-level">
+                                        <div class="level-bar">
+                                            <div class="level-fill" style="width:95%"></div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="skill-item d-flex align-items-center gap-2 mb-2">
+                                    <div class="skill-info"><i class="fas fa-flag-usa"></i> <span>Anglais
+                                            technique</span>
+                                    </div>
+                                    <div class="skill-level">
+                                        <div class="level-bar">
+                                            <div class="level-fill" style="width:70%"></div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact" aria-labelledby="contact-title">
+            <div class="container py-5">
+                <h2 id="contact-title" class="section-title">
+                    <span class="title-line">Contact</span>
+                    <div class="title-underline"></div>
+                </h2>
+                <div class="row">
+                    <div class="col-12 col-lg-6 mb-4 mb-lg-0">
+                        <article class="contact-info">
+                            <h3 class="h4 mb-3">Travaillons ensemble</h3>
+                            <p class="lead mb-4">Vous avez un projet en tête ? N'hésitez pas à me contacter pour en
+                                discuter !</p>
+                            <address class="contact-details mb-4">
+                                <div class="contact-item d-flex align-items-center gap-2 mb-3">
+                                    <i class="fas fa-envelope text-primary" aria-hidden="true"></i>
+                                    <a href="mailto:decamps.d@hotmail.com"
+                                        aria-label="Envoyer un email à decamps.d@hotmail.com">decamps.d@hotmail.com</a>
+                                </div>
+                                <div class="contact-item d-flex align-items-center gap-2 mb-3">
+                                    <i class="fas fa-map-marker-alt text-primary" aria-hidden="true"></i>
+                                    <span>France</span>
+                                </div>
+                            </address>
+                            <nav class="social-links d-flex gap-3" aria-label="Réseaux sociaux">
+                                <a href="#" class="social-link btn btn-outline-primary"
+                                    aria-label="Voir mon profil GitHub">
+                                    <i class="fab fa-github" aria-hidden="true"></i>
+                                </a>
+                                <a href="#" class="social-link btn btn-outline-primary"
+                                    aria-label="Voir mon profil LinkedIn">
+                                    <i class="fab fa-linkedin" aria-hidden="true"></i>
+                                </a>
+                                <a href="#" class="social-link btn btn-outline-primary"
+                                    aria-label="Voir mon profil Twitter">
+                                    <i class="fab fa-twitter" aria-hidden="true"></i>
+                                </a>
+                            </nav>
+                        </article>
+                    </div>
+                    <div class="col-12 col-lg-6">
+                        <article class="contact-form">
+                            <form id="contact-form" method="POST" action="https://formspree.io/f/mkgzgaww"
+                                aria-labelledby="contact-form-title">
+                                <h3 id="contact-form-title" class="visually-hidden">Formulaire de contact</h3>
+                                <div class="form-group mb-3">
+                                    <label for="name" class="visually-hidden">Nom complet</label>
+                                    <input type="text" id="name" name="name" class="form-control form-control-lg"
+                                        required placeholder="Nom complet" aria-required="true">
+                                </div>
+                                <div class="form-group mb-3">
+                                    <label for="email" class="visually-hidden">Email</label>
+                                    <input type="email" id="email" name="email" class="form-control form-control-lg"
+                                        required placeholder="Email" aria-required="true">
+                                </div>
+                                <div class="form-group mb-3">
+                                    <label for="subject" class="visually-hidden">Sujet</label>
+                                    <input type="text" id="subject" name="subject" class="form-control form-control-lg"
+                                        required placeholder="Sujet" aria-required="true">
+                                </div>
+                                <div class="form-group mb-4">
+                                    <label for="message" class="visually-hidden">Message</label>
+                                    <textarea id="message" name="message" rows="5" class="form-control form-control-lg"
+                                        required placeholder="Message" aria-required="true"></textarea>
+                                </div>
+                                <input type="hidden" name="_replyto" value="decamps.d@hotmail.com">
+                                <input type="hidden" name="_subject" value="Nouveau message du portfolio">
+                                <input type="hidden" name="_next" value="merci.html">
+                                <button type="submit" class="btn btn-primary btn-lg w-100"
+                                    aria-label="Envoyer le message">Envoyer le message</button>
+                            </form>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="container py-5">
+            <div class="row g-4">
+                <div class="col-12 col-lg-4">
+                    <section class="footer-section text-center text-lg-start">
+                        <h4 class="h5 mb-3">Portfolio</h4>
+                        <p class="small">🚀 Créateur d'expériences web modernes & performantes,
+                            je transforme des idées en interfaces fluides, responsives et engageantes. Mon moteur ?
+                            L'obsession du détail, la vitesse, et l'envie constante d'apprendre pour repousser les
+                            limites du web.</p>
+                    </section>
+                </div>
+                <div class="col-12 col-lg-4">
+                    <nav class="footer-section text-center text-lg-start">
+                        <h4 class="h5 mb-3">Liens rapides</h4>
+                        <ul class="list-unstyled">
+                            <li class="mb-2"><a href="#home" class="text-decoration-none">Accueil</a></li>
+                            <li class="mb-2"><a href="#about" class="text-decoration-none">À propos</a></li>
+                            <li class="mb-2"><a href="#projects" class="text-decoration-none">Projets</a></li>
+                            <li class="mb-2"><a href="#skills" class="text-decoration-none">Compétences</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="col-12 col-lg-4">
+                    <section class="footer-section text-center text-lg-start">
+                        <h4 class="h5 mb-3">Contact</h4>
+                        <address class="small mb-3">
+                            <a href="mailto:decamps.d@hotmail.com">decamps.d@hotmail.com</a>
+                        </address>
+                        <nav class="footer-social d-flex gap-3 justify-content-center justify-content-lg-start"
+                            aria-label="Réseaux sociaux">
+                            <a href="#" class="btn btn-outline-primary btn-sm" aria-label="Voir mon profil GitHub">
+                                <i class="fab fa-github" aria-hidden="true"></i>
+                            </a>
+                            <a href="#" class="btn btn-outline-primary btn-sm" aria-label="Voir mon profil LinkedIn">
+                                <i class="fab fa-linkedin" aria-hidden="true"></i>
+                            </a>
+                        </nav>
+                    </section>
+                </div>
+            </div>
+            <div class="footer-bottom text-center mt-4 pt-4 border-top">
+                <p class="small mb-0">&copy; <time datetime="2025">2025</time> Portfolio. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Schema.org JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Développeur Web Junior",
+      "jobTitle": "Développeur Web Full-Stack",
+      "description": "Développeur web junior en reconversion, spécialisé en React, Symfony et développement full-stack. Créateur d'expériences web modernes et performantes.",
+      "url": "https://votre-domaine.com",
+      "image": "https://votre-domaine.com/01013010.jpg",
+      "email": "mailto:decamps.d@hotmail.com",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "FR",
+        "addressRegion": "France"
+      },
+      "sameAs": [
+        "https://github.com/votre-username",
+        "https://linkedin.com/in/votre-profil"
+      ],
+      "knowsAbout": [
+        "HTML5", "CSS3", "JavaScript", "React", "PHP", "Symfony", "Node.js", "MySQL", "Bootstrap", "GitHub", "VS Code", "Figma"
+      ],
+      "knowsLanguage": [
+        {
+          "@type": "Language",
+          "name": "Français",
+          "proficiencyLevel": "Native"
+        },
+        {
+          "@type": "Language", 
+          "name": "Anglais",
+          "proficiencyLevel": "Technical"
+        }
+      ],
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Freelance"
+      },
+      "alumniOf": {
+        "@type": "Organization",
+        "name": "Formation en reconversion"
+      },
+      "hasOccupation": {
+        "@type": "Occupation",
+        "name": "Développeur Web",
+        "occupationLocation": {
+          "@type": "City",
+          "name": "France"
+        }
+      }
+    }
+    </script>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+
+    <!-- Performance Monitoring -->
+    <script>
+        // Performance monitoring with Core Web Vitals
+        if ('performance' in window) {
+            window.addEventListener('load', function () {
+                setTimeout(function () {
+                    const perfData = performance.getEntriesByType('navigation')[0];
+                    if (perfData) {
+                        console.log('🚀 Page Load Time:', perfData.loadEventEnd - perfData.loadEventStart, 'ms');
+                        console.log('⚡ DOM Content Loaded:', perfData.domContentLoadedEventEnd - perfData.domContentLoadedEventStart, 'ms');
+                        console.log('📊 Total Page Size:', (performance.memory ? Math.round(performance.memory.usedJSHeapSize / 1024 / 1024) : 'N/A'), 'MB');
+                    }
+
+                    // Core Web Vitals monitoring
+                    if ('web-vital' in window) {
+                        webVitals.getCLS(console.log);
+                        webVitals.getFID(console.log);
+                        webVitals.getFCP(console.log);
+                        webVitals.getLCP(console.log);
+                        webVitals.getTTFB(console.log);
+                    }
+                }, 0);
+            });
+        }
+
+        // Service Worker registration for PWA
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function () {
+                navigator.serviceWorker.register('/sw.js')
+                    .then(function (registration) {
+                        console.log('✅ Service Worker registered successfully');
+                    })
+                    .catch(function (error) {
+                        console.log('❌ Service Worker registration failed:', error);
+                    });
+            });
+        }
+    </script>
+</body>
+
+</html>
